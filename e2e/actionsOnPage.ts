@@ -1,4 +1,4 @@
-export class Auctions {
+export class Action {
     
     facilityLocator = '#combo_facility'
     glyphiconLocator = '.glyphicon'
@@ -6,17 +6,11 @@ export class Auctions {
     dateFieldLocator = '#txt_visit_date'
     commentFieldLocator = '#txt_comment'
     makeAppointmentButtonLocator = '#btn-book-appointment'
-    confirmAppointmentLocation = '.col-xs-12.text-center'
     radioButtonHealthcareNone = '#radio_program_none'
     radioButtonHealthcareMadicAid = '#radio_program_medicaid'
     menuLocator = '#menu-toggle'
     historyLocator = ':nth-child(4) > a'
-    facilityHistoryLocator = '#facility'
-    healthcareHistoryLocator = '#program'
-    commentHistoryLocator = '#comment'
-    dateHistoryLocator = '.panel-heading'
-
-
+    
 
     getFacility (fromDropdown: number): void {
         cy.get(this.facilityLocator).select(fromDropdown)
@@ -46,10 +40,6 @@ export class Auctions {
         cy.get(this.makeAppointmentButtonLocator).click()
     }
 
-    verifyConfirmation () {
-        cy.get(this.confirmAppointmentLocation).contains('Appointment Confirmation')
-    }
-
     radioButtonHealthcare (): void {
         cy.get(this.radioButtonHealthcareNone).click()
     }
@@ -65,22 +55,5 @@ export class Auctions {
     historyClick () {
         cy.get(this.historyLocator).click()
     }
-
-    checkFacility (facilityName: string): void {
-        cy.get(this.facilityHistoryLocator).contains(facilityName)
-    }
-
-    getHealthcare (getHealthcare: string): void {
-        cy.get(this.healthcareHistoryLocator).contains(getHealthcare)
-    }
-
-    getComment (commentHistory: string): void {
-        cy.get(this.commentHistoryLocator).contains (commentHistory)
-    }
-
-    getDate (dateHistory: string): void {
-        cy.get(this.dateHistoryLocator).contains(dateHistory)
-    }
-
 
 }
