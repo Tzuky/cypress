@@ -1,6 +1,3 @@
-//const userName = 'John Doe'
-//const password = 'ThisIsNotAPassword'
-
 export class LoginAndMakeAppointments{
     
     makeAppointmentButton = '#btn-make-appointment'
