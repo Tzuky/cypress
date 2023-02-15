@@ -33,7 +33,6 @@ describe('open Appointment app and perform few appointments and check history', 
       actionsOnPage.menuClick()
       actionsOnPage.historyClick()
       actionsOnPage.checkFacility('Seoul CURA Healthcare Center')
-      //actionsOnPage.getHealthcare('None')
       actionsOnPage.getComment(comment1)
       actionsOnPage.getDate('22/02/2023')
     })
