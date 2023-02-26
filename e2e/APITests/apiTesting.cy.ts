@@ -2,7 +2,7 @@
 import { any } from "cypress/types/bluebird"
 import { forEach, includes } from 'cypress/types/lodash'
 import { JsxEmit } from "typescript"
-import { BaseURLandToken } from "./baseUrlAndToken"
+// import { BaseURLandToken } from "./baseUrlAndToken"
 
 
 const baseUrl = 'https://gorest.co.in'
